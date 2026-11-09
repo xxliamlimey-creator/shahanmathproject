@@ -1,0 +1,6 @@
+{
+  "name": "LEGO Mini Shop",
+  "description": "Interactive LEGO-themed mini shop and mathematics challenge for a school exhibition.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

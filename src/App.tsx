@@ -5,7 +5,6 @@ import { Screen2Welcome } from './components/screens/Screen2Welcome';
 import { Screen3Shopping } from './components/screens/Screen3Shopping';
 import { Screen4Challenge } from './components/screens/Screen4Challenge';
 import { Screen5Result } from './components/screens/Screen5Result';
-import { WALL_BACKGROUND_IMAGE } from './data/productImages';
 
 export default function App() {
   // Screen 1 through 5 state. In-memory only: refreshing browser always starts at Screen 1.
@@ -57,17 +56,9 @@ export default function App() {
   };
 
   return (
-    <div
-      className="min-h-screen w-full text-white flex flex-col justify-center items-center selection:bg-yellow-400 selection:text-slate-900 relative font-sans p-4 sm:p-6"
-      style={{
-        backgroundImage: `linear-gradient(rgba(10, 22, 38, 0.86), rgba(8, 16, 28, 0.92)), url(${WALL_BACKGROUND_IMAGE})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
-    >
-      {/* Main Content Area — Screen rendering (No top bar per user instruction) */}
-      <main className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center relative z-10 py-4">
+    <div className="min-h-screen w-full bg-slate-900 text-white flex flex-col justify-center items-center font-sans p-4 sm:p-6">
+      {/* Main Content Area — Screen rendering */}
+      <main className="w-full max-w-5xl mx-auto flex flex-col justify-center items-center py-4">
         {currentStep === 1 && (
           <div className="w-full">
             <Screen1Name onContinue={handleNameSubmit} />

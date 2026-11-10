@@ -16,23 +16,21 @@ export const LegoTypography: React.FC<LegoTypographyProps> = ({
   color = 'yellow',
 }) => {
   const sizeClasses = {
-    sm: 'text-lg md:text-xl font-bold',
-    md: 'text-2xl md:text-3xl font-extrabold',
-    lg: 'text-3xl md:text-4xl lg:text-5xl font-black',
-    xl: 'text-4xl md:text-5xl lg:text-6xl font-black',
-    '2xl': 'text-5xl md:text-6xl lg:text-7xl font-black',
+    sm: 'text-lg font-bold',
+    md: 'text-2xl font-bold',
+    lg: 'text-3xl font-extrabold',
+    xl: 'text-4xl font-extrabold',
+    '2xl': 'text-5xl font-black',
   };
 
   const colorClasses = {
-    yellow: 'text-[#FFE600] drop-shadow-[0_3px_0_#997300]',
-    white: 'text-white drop-shadow-[0_3px_0_#1E293B]',
-    red: 'text-[#FF333D] drop-shadow-[0_3px_0_#8B0006]',
+    yellow: 'text-yellow-400',
+    white: 'text-white',
+    red: 'text-red-500',
   };
 
   return (
-    <Tag
-      className={`font-sans tracking-tight leading-tight select-none ${sizeClasses[size]} ${colorClasses[color]} ${className}`}
-    >
+    <Tag className={`font-sans ${sizeClasses[size]} ${colorClasses[color]} ${className}`}>
       {text}
     </Tag>
   );

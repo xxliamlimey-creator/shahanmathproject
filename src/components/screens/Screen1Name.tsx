@@ -21,21 +21,16 @@ export const Screen1Name: React.FC<Screen1NameProps> = ({ onContinue }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[70vh] px-4 py-8 text-center max-w-lg mx-auto">
-      {/* Clean rectangular form card with no top squares */}
+    <div className="flex flex-col items-center justify-center min-h-[70vh] px-4 text-center max-w-md mx-auto">
       <form
         onSubmit={handleSubmit}
-        className="w-full bg-[#0E2643] border-4 border-[#0055BF] p-6 sm:p-10 shadow-[0_16px_40px_rgba(0,0,0,0.7)]"
+        className="w-full bg-slate-900 p-8 text-center"
       >
-        {/* Title directly inside the UI without separate top sign */}
-        <h1 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-[#FFE600] drop-shadow-[0_2px_0_#997300] mb-8">
+        <h1 className="text-3xl font-bold text-yellow-400 mb-6">
           Welcome to the Mini Shop!
         </h1>
 
-        <div className="relative mb-6 text-left">
-          <label htmlFor="customer-name" className="sr-only">
-            Enter your name
-          </label>
+        <div className="mb-6 text-left">
           <input
             id="customer-name"
             type="text"
@@ -47,25 +42,24 @@ export const Screen1Name: React.FC<Screen1NameProps> = ({ onContinue }) => {
             placeholder="Enter your name..."
             autoFocus
             className={`
-              w-full px-4 py-3.5 text-xl font-bold text-slate-900 bg-white rounded-none
-              border-4 transition-all font-sans
-              placeholder:text-slate-400 placeholder:font-normal
-              ${error ? 'border-[#E3000B] ring-4 ring-red-500/30' : 'border-[#FFD200] focus:border-[#E3000B]'}
+              w-full px-4 py-3 text-lg font-medium text-black bg-white
+              border-2 outline-none
+              ${error ? 'border-red-500' : 'border-gray-300 focus:border-yellow-400'}
             `}
           />
           {error && (
-            <p className="mt-2 text-[#FF4D55] font-bold text-sm bg-black/70 px-3 py-1 border-l-4 border-[#FF4D55]">
+            <p className="mt-2 text-red-400 text-sm font-semibold">
               Please enter your name to continue!
             </p>
           )}
         </div>
 
-        <div className="flex justify-center pt-2">
+        <div className="flex justify-center">
           <LegoButton
             type="submit"
             variant="green"
             size="lg"
-            className="w-full sm:w-auto min-w-[200px]"
+            className="w-full"
           >
             Continue
           </LegoButton>
